@@ -11,13 +11,12 @@ export default {
   methods: {
     init () {
       const Cesium = this.cesium
-
+      Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ZTM3ZTkwNy1hMWU5LTQxNDktYjdhNC0yMzc5NTEyNDgzMzEiLCJpZCI6ODk5MTAsImlhdCI6MTY1NjM5NTAzOX0.z7Dn_tJQW0ysqXsjvqyvxxELXlSHdfyuqZ4ENFl-2j8'
       const viewer = new Cesium.Viewer('cesiumContainer')
       viewer._cesiumWidget._creditContainer.style.display = 'none' // 隐藏版权
-      Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwOWQyZTk2Yy00OGI4LTQ3ZjgtODQwZS00YWI5YzU5YjUyNjciLCJpZCI6ODk5MTAsImlhdCI6MTY1MDAwNDkzNH0.V-28M5vTVUwX94ZOs5Qh10w8FIKcLp8RKCK8H6-t_RE'
       viewer.imageryLayers.addImageryProvider(
         new Cesium.WebMapTileServiceImageryProvider({
-          url: 'http://t0.tianditu.gov.cn/cia_w/wmts?tk=23f1c0be4447017654018116140c010c',
+          url: 'http://t0.tianditu.gov.cn/img_c/wmts?tk=b563f03ce485c68c169d98981ba863a8',
           layer: 'cia',
           style: 'default',
           tileMatrixSetID: 'w',
