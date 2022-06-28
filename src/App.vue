@@ -12,7 +12,9 @@ export default {
     init () {
       const Cesium = this.cesium
       Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ZTM3ZTkwNy1hMWU5LTQxNDktYjdhNC0yMzc5NTEyNDgzMzEiLCJpZCI6ODk5MTAsImlhdCI6MTY1NjM5NTAzOX0.z7Dn_tJQW0ysqXsjvqyvxxELXlSHdfyuqZ4ENFl-2j8'
-      const viewer = new Cesium.Viewer('cesiumContainer')
+      const viewer = new Cesium.Viewer('cesiumContainer', {
+        infoBox: false
+      })
       viewer._cesiumWidget._creditContainer.style.display = 'none' // 隐藏版权
       viewer.imageryLayers.addImageryProvider(
         new Cesium.WebMapTileServiceImageryProvider({
